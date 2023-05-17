@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-def change_background(src_path, dst_path):
+def black_to_white(src_path, dst_path):
     img = cv2.imread(src_path, cv2.IMREAD_UNCHANGED) 
     alpha = img[:, :, 3]   # alpha channel
     img_rgb = img[:, :, :3]
@@ -15,4 +15,4 @@ def change_background(src_path, dst_path):
 
     cv2.imwrite(dst_path, result_with_alpha)
 
-change_background("JGG copy.png", "result.png")
+black_to_white("SUP.png", "result.png")
